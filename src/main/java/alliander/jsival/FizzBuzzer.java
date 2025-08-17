@@ -8,11 +8,9 @@ public class FizzBuzzer {
 
         if (isMultipleOfFive() && isMultipleOfThree()){
             return "FizzBuzz";
-        }
-
-        if (num.intValue() % 3 == 0) {
+        } else if (isMultipleOfThree()) {
             return "Fizz";
-        } else if (num.intValue() % 5 == 0) {
+        } else if (isMultipleOfFive()) {
             return "Buzz";
         }
         return num.toString();
