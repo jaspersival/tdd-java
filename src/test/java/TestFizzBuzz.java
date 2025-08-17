@@ -21,4 +21,10 @@ public class TestFizzBuzz {
         String result = fizzBuzzer.fizzBuzz(3);
         assertEquals("Fizz", result);
     }
+
+    @Test
+    void testShouldReturnFizzGivenTwoMultipleOfThree() {
+        String result = fizzBuzzer.fizzBuzz(6);
+        assertEquals("Fizz", result);
+    }
 }
