@@ -45,4 +45,9 @@ public class TestFizzBuzz {
         String result = fizzBuzzer.fizzBuzz(15);
         assertEquals("FizzBuzz", result);
     }
+    @Test
+    void testShouldReturnFizzBuzzGivenSecondMultipleOfFiveAndThree() {
+        String result = fizzBuzzer.fizzBuzz(30);
+        assertEquals("FizzBuzz", result);
+    }
 }
