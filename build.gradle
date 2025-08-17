@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'com.diffplug.spotless' version '7.2.1'
 }
 
 group = 'alliander.jsival'
@@ -14,6 +15,16 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
+
+spotless {
+    java {
+        googleJavaFormat()
+    }
+}
+tasks.named('build') {
+    dependsOn 'spotlessApply'
+}
+
 
 application {
     mainClass = 'alliander.jsival.Main'
